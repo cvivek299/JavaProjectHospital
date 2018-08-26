@@ -34,7 +34,8 @@ public class Controller {
             ConnectionClass connectionClass = new ConnectionClass();
             connection = connectionClass.getConnection();
             statement = connection.createStatement();
-            sql = "select * from user where username='" + username.getText() + "';";
+
+            sql = "select username,password from customer where username='" + username.getText() + "';";
 
             resultSet = statement.executeQuery(sql);
             //Ensure we start with first row

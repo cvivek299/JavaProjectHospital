@@ -66,16 +66,16 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ToggleButton mnemonicParsing="false" style="-fx-background-radius: 10;" text="Standard">
+            <ToggleButton fx:id="standard" mnemonicParsing="false" style="-fx-background-radius: 10;" text="Standard">
                <toggleGroup>
                   <ToggleGroup fx:id="toggleGroup2" />
                </toggleGroup>
             </ToggleButton>
-            <ToggleButton mnemonicParsing="false" style="-fx-background-radius: 10;" text="Superior" toggleGroup="$toggleGroup2" GridPane.columnIndex="1" />
-            <ToggleButton mnemonicParsing="false" style="-fx-background-radius: 10;" text="Deluxe" toggleGroup="$toggleGroup2" GridPane.columnIndex="2" />
+            <ToggleButton fx:id="superior" mnemonicParsing="false" style="-fx-background-radius: 10;" text="Superior" toggleGroup="$toggleGroup2" GridPane.columnIndex="1" />
+            <ToggleButton fx:id="deluxe" mnemonicParsing="false" style="-fx-background-radius: 10;" text="Deluxe" toggleGroup="$toggleGroup2" GridPane.columnIndex="2" />
          </children>
       </GridPane>
-      <Button layoutX="261.0" layoutY="440.0" mnemonicParsing="false" style="-fx-background-color: #f00;" text="Search" textFill="#321283">
+      <Button layoutX="261.0" layoutY="440.0" mnemonicParsing="false" onAction="#searchResult" style="-fx-background-color: #f00;" text="Search" textFill="#321283">
          <font>
             <Font size="15.0" />
          </font>
