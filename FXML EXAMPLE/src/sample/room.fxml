@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -8,8 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #337;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchRoomController">
+<AnchorPane prefHeight="495.0" prefWidth="600.0" style="-fx-background-color: #337;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchRoomController">
    <children>
       <Label alignment="CENTER" layoutX="88.0" layoutY="131.0" text="Budget" textAlignment="CENTER" textFill="#f9fcfa">
          <font>
@@ -75,10 +75,29 @@
             <ToggleButton mnemonicParsing="false" style="-fx-background-radius: 10;" text="Deluxe" toggleGroup="$toggleGroup2" GridPane.columnIndex="2" />
          </children>
       </GridPane>
-      <Button layoutX="261.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: #f00;" text="Search" textFill="#321283">
+      <Button layoutX="261.0" layoutY="440.0" mnemonicParsing="false" style="-fx-background-color: #f00;" text="Search" textFill="#321283">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
+      <AnchorPane layoutX="106.0" layoutY="311.0" prefHeight="26.0" prefWidth="376.0" style="-fx-background-color: #fff;">
+         <children>
+            <DatePicker layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-in" />
+            <DatePicker layoutX="239.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-out" />
+            <Label alignment="CENTER" graphicTextGap="0.0" layoutX="181.0" layoutY="-19.0" prefHeight="5.0" prefWidth="15.0" text="_" textAlignment="CENTER" textFill="#111111">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </AnchorPane>
+      <CheckBox layoutX="239.0" layoutY="386.0" mnemonicParsing="false" text="Breakfast" textFill="#fffbfb">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
    </children>
 </AnchorPane>
