@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="534.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerController">
+   <children>
+      <ImageView fitHeight="534.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@backgroundCustomer.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="121.0" layoutY="59.0" prefHeight="444.0" prefWidth="359.0" style="-fx-background-color: #003; -fx-background-radius: 20;">
+         <children>
+            <GridPane layoutX="40.0" layoutY="37.0" prefHeight="298.0" prefWidth="280.0">
+               <children>
+                  <TextField fx:id="lastName" prefHeight="45.0" prefWidth="280.0" promptText="Enter Last Name" style="-fx-background-radius: 10;" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="firstName" layoutX="10.0" layoutY="30.0" prefHeight="45.0" prefWidth="280.0" promptText="Enter First Name" style="-fx-background-radius: 10;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="emailAddress" layoutX="10.0" layoutY="105.0" prefHeight="45.0" prefWidth="280.0" promptText="Enter Email Address" style="-fx-background-radius: 10;" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="phoneNumber" layoutX="10.0" layoutY="179.0" prefHeight="45.0" prefWidth="280.0" promptText="Enter Phone Number" style="-fx-background-radius: 10;" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Button layoutX="86.0" layoutY="384.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="36.0" prefWidth="188.0" style="-fx-background-color: orange;" text="ADD IT !! " textFill="#fcf9f9">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label fx:id="alertMessage" alignment="CENTER" layoutX="21.0" layoutY="341.0" prefHeight="25.0" prefWidth="318.0" textAlignment="CENTER" textFill="#e02c16">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

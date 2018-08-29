@@ -22,7 +22,8 @@ public class Controller {
         signUp.setText("Yes");
     }
 
-    public void loginClicked() throws SQLException {
+    public void loginClicked() throws SQLException
+    {
 
         Connection connection = null;
         Statement statement = null;
@@ -35,7 +36,7 @@ public class Controller {
             connection = connectionClass.getConnection();
             statement = connection.createStatement();
 
-            sql = "select username,password from customer where username='" + username.getText() + "';";
+            sql = "select username,password from admin where username='" + username.getText() + "';";
 
             resultSet = statement.executeQuery(sql);
             //Ensure we start with first row
