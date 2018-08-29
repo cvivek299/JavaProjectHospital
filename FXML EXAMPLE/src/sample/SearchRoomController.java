@@ -55,6 +55,7 @@ public class SearchRoomController {
 
     }
 
+
     @FXML
     public void bedroom()
     {
@@ -76,6 +77,7 @@ public class SearchRoomController {
     }
     public String getRoomType()
     {
+
 
         String roomType=null;
 
@@ -119,7 +121,6 @@ public class SearchRoomController {
             if (resultSet.next()) {
                 do {
                     System.out.println(""+resultSet.getInt("room_no")
-                            +resultSet.getString("room_size")
                             +resultSet.getString("room_type")
                             +resultSet.getInt("price"));
 
