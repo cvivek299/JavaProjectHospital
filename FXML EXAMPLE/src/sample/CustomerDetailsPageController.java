@@ -7,8 +7,10 @@ import javafx.scene.control.TextField;
 
 import java.sql.*;
 
-public class CustomerController {
+public class CustomerDetailsPageController {
 
+
+    //id's of all the buttons,labels seen in UI
     @FXML
     public TextField firstName;
 
@@ -23,10 +25,27 @@ public class CustomerController {
 
     @FXML
     public Label alertMessage;
+    //id's of all the buttons,labels seen in UI
 
+
+    //room which this customer will take
+    public int room_no;
+    //room which this customer will take
+
+
+    //this function used by roomAvailabilityPageController,it passes the room_no to this
+    void set(int room_no)
+    {
+        this.room_no=room_no;
+    }
+    //this function used by roomAvailabilityPageController,it passes the room_no to this
+
+
+
+    //when submit/book button clicked
     @FXML
     void addCustomer() throws SQLException {
-
+        //sql part->adding into database
         Connection connection = null;
         String sqlWithLastName,sqlWithoutLastName;
 
@@ -36,19 +55,18 @@ public class CustomerController {
             connection = connectionClass.getConnection();
 
             sqlWithLastName = "insert into customer(first_name,last_name,email_address,phone_number) values(?,?,?,?);";
-
             sqlWithoutLastName = "insert into customer(first_name,email_address,phone_number) values(?,?,?);";
 
 
 
             if(firstName.getText().length()==0) {
-                alertMessage.setText("Please enter your first name.");
+                alertMessage.setText("Please enter the first name.");
             }
             else if(emailAddress.getText().length()==0) {
-                alertMessage.setText("Please enter your email address.");
+                alertMessage.setText("Please enter the email address.");
             }
             else if(phoneNumber.getText().length()==0) {
-                phoneNumber.setText("Please enter your phone number.");
+                phoneNumber.setText("Please enter the phone number.");
             }
             else
             {
@@ -61,7 +79,7 @@ public class CustomerController {
 
                 }
                 else {
-                    ps=connection.prepareStatement(sqlWithoutLastName);
+                    ps=connection.prepareStatement(sqlWithLastName);
                     ps.setString(1,firstName.getText());
                     ps.setString(2,lastName.getText());
                     ps.setString(3,emailAddress.getText());
@@ -84,5 +102,7 @@ public class CustomerController {
             if (connection != null)
                 connection.close();
         }
+        //sql part->adding into database
     }
+    //when submit/book button clicked
 }
