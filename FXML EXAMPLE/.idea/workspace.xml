@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/CustomerDetailsPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/HomePageForReception.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/HomePageForReceptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/LoginPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/LoginPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/RoomAvailabilityPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/RoomAvailabilityPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/RoomDetailsPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/RoomDetailsPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/RoomResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/RoomResultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/SearchRoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/SearchRoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/roomResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/roomResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/RoomResultController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/SearchRoomController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FXML EXAMPLE/sample/roomResult.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/HomePageForReception.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/HomePageForReception.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/LoginPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/RoomResultController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SearchRoomController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/customer.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/room.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/roomResult.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/RoomAvailabilityPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/RoomAvailabilityPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/RoomDetailsPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/RoomDetailsPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/RoomDetailsPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/RoomDetailsPageController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,14 +69,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomePageForReceptionController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/HomePageForReceptionController.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="28" column="107" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="107" />
+            <state relative-caret-position="228">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomDetailsPage.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/RoomDetailsPage.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file leaf-file-name="RoomDetailsPageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/RoomDetailsPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="216" column="38" lean-forward="true" selection-start-line="216" selection-start-column="38" selection-end-line="216" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerDetailsPageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -98,51 +115,8 @@
       <file leaf-file-name="LoginPageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/LoginPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoomDetailsPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/RoomDetailsPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="255" lean-forward="true" selection-start-line="255" selection-end-line="255" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoomAvailabilityPageController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/RoomAvailabilityPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerDetailsPage.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailsPage.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerDetailsPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="35" column="88" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="88" />
+            <state relative-caret-position="228">
+              <caret line="89" column="35" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="89" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -176,7 +150,6 @@
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/customer.fxml" />
         <option value="$PROJECT_DIR$/src/sample/roomResult.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/SearchRoomController.java" />
         <option value="$PROJECT_DIR$/src/sample/RoomResultController.java" />
         <option value="$PROJECT_DIR$/src/sample/CustomerController.java" />
@@ -188,11 +161,12 @@
         <option value="$PROJECT_DIR$/src/sample/RoomDetailsPage.fxml" />
         <option value="$PROJECT_DIR$/src/sample/RoomAvailabilityPage.fxml" />
         <option value="$PROJECT_DIR$/src/sample/HomePageForReception.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java" />
         <option value="$PROJECT_DIR$/src/sample/HomePageForReceptionController.java" />
-        <option value="$PROJECT_DIR$/src/sample/LoginPageController.java" />
-        <option value="$PROJECT_DIR$/src/sample/RoomDetailsPageController.java" />
         <option value="$PROJECT_DIR$/src/sample/RoomAvailabilityPageController.java" />
+        <option value="$PROJECT_DIR$/src/sample/LoginPageController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java" />
+        <option value="$PROJECT_DIR$/src/sample/RoomDetailsPageController.java" />
       </list>
     </option>
   </component>
@@ -381,18 +355,19 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3290938" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37201908" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37201908" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
@@ -404,7 +379,6 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39947438" />
       <window_info anchor="right" id="JetGradle" order="4" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.3290938" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Database" order="6" />
@@ -438,13 +412,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/room.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/SearchRoomController.java" />
     <entry file="file://$PROJECT_DIR$/src/connectivity/ConnectionClass.java">
@@ -539,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/receptionHome.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/HomePageForReception.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
@@ -557,9 +517,28 @@
     <entry file="file://$PROJECT_DIR$/src/sample/SearchRoomController.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/roomResult.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/RoomResultController.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailsPage.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RoomAvailabilityPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5334#5365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/RoomAvailabilityPage.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
+        <state relative-caret-position="541">
           <caret line="101" column="19" lean-forward="true" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
         </state>
       </provider>
@@ -573,14 +552,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RoomDetailsPage.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/HomePageForReception.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -589,52 +560,59 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailsPage.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/HomePageForReceptionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        <state relative-caret-position="547">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="88" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="88" />
+        <state relative-caret-position="123">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/LoginPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="228">
+          <caret line="89" column="35" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="89" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/HomePageForReceptionController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailsPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="28" column="107" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RoomDetailsPage.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/RoomDetailsPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="255" lean-forward="true" selection-start-line="255" selection-end-line="255" />
+        <state relative-caret-position="75">
+          <caret line="216" column="38" lean-forward="true" selection-start-line="216" selection-start-column="38" selection-end-line="216" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RoomAvailabilityPageController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+        <state relative-caret-position="228">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

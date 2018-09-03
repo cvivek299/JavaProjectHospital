@@ -33,12 +33,6 @@ public class RoomDetailsPageController {
     public ToggleButton bhk2;
     @FXML
     public ToggleButton bhk3;
-    @FXML
-    public ToggleButton standard;
-    @FXML
-    public ToggleButton superior;
-    @FXML
-    public ToggleButton deluxe;
     //id's of all the buttons,labels seen in UI
 
 
@@ -96,24 +90,6 @@ public class RoomDetailsPageController {
         return roomSize;
 
     }
-    //returns the selected roomSize
-
-    //returns the selected roomType
-    public String getRoomType()
-    {
-        String roomType=null;
-
-        if(standard.isSelected())
-            roomType="standard";
-        if(superior.isSelected())
-            roomType="superior";
-        if(deluxe.isSelected())
-            roomType="deluxe";
-
-        return roomType;
-
-    }
-    //returns the selected roomType
 
     //returns the number of room of type specified by sql query,like 1BHK deluxe,which are not reserved
     public int countRooms(String sql) throws SQLException {
@@ -203,7 +179,6 @@ public class RoomDetailsPageController {
         String sqlDeluxePrice=null,sqlSuperiorPrice=null,sqlStandardPrice=null;
 
         String roomSize=getRoomSize();
-        String roomType=getRoomType();
 
         sqlDeluxeCount="select count(*) from room natural join room_price where " +
                 "price>="+budget.get(minBudget.getValue())+" and " +

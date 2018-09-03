@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 03, 2018 at 08:51 AM
+-- Generation Time: Sep 03, 2018 at 10:00 AM
 -- Server version: 5.7.21-log
 -- PHP Version: 7.2.8
 
@@ -46,6 +46,7 @@ CREATE TABLE `bill` (
 CREATE TABLE `booking` (
   `booking_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
+  `employee_id` int(11) NOT NULL,
   `room_no` int(11) NOT NULL,
   `check_in` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `check_out` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -64,15 +65,6 @@ CREATE TABLE `customer` (
   `email_address` varchar(100) NOT NULL,
   `phone_number` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `customer`
---
-
-INSERT INTO `customer` (`customer_id`, `first_name`, `last_name`, `email_address`, `phone_number`) VALUES
-(1, 'Raj', 'Khandor', 'khandorraj@gmail.com', '9393939393'),
-(2, 'Vineet', 'Solanki', 'vitzs@gmail.com', '9191919191'),
-(3, 'Vivek', 'Chauhan', 'cvivek299@gmail.com', '9819392308');
 
 -- --------------------------------------------------------
 
@@ -95,7 +87,7 @@ CREATE TABLE `employee` (
 
 INSERT INTO `employee` (`employee_id`, `username`, `password`, `name`, `department`, `salary`) VALUES
 (1, 'vitz_6', 'abcd', 'svineet', 'house keeping', 15000),
-(2, 'vivek_1998299', 'helloworld', 'cvivek', 'house keeping', 15000);
+(2, 'vivek_1998299', 'helloworld', 'cvivek', 'reception', 15000);
 
 -- --------------------------------------------------------
 
@@ -156,8 +148,8 @@ INSERT INTO `room_price` (`room_size`, `room_type`, `price`) VALUES
 ALTER TABLE `bill`
   ADD PRIMARY KEY (`bill_no`),
   ADD KEY `customer_id` (`customer_id`),
-  ADD KEY `booking_id` (`booking_id`),
-  ADD KEY `employee_id` (`employee_id`);
+  ADD KEY `employee_id` (`employee_id`),
+  ADD KEY `booking_id` (`booking_id`);
 
 --
 -- Indexes for table `booking`
@@ -165,7 +157,8 @@ ALTER TABLE `bill`
 ALTER TABLE `booking`
   ADD PRIMARY KEY (`booking_id`),
   ADD KEY `customer_id` (`customer_id`),
-  ADD KEY `room_no` (`room_no`);
+  ADD KEY `room_no` (`room_no`),
+  ADD KEY `employee_id` (`employee_id`);
 
 --
 -- Indexes for table `customer`
@@ -198,10 +191,22 @@ ALTER TABLE `room_price`
 --
 
 --
+-- AUTO_INCREMENT for table `bill`
+--
+ALTER TABLE `bill`
+  MODIFY `bill_no` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `booking`
+--
+ALTER TABLE `booking`
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -226,6 +231,7 @@ ALTER TABLE `bill`
 --
 ALTER TABLE `booking`
   ADD CONSTRAINT `booking_to_customer` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
+  ADD CONSTRAINT `booking_to_employee` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`employee_id`),
   ADD CONSTRAINT `booking_to_room` FOREIGN KEY (`room_no`) REFERENCES `room` (`room_no`);
 
 --

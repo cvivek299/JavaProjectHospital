@@ -47,7 +47,7 @@ public class LoginPageController {
             connection = connectionClass.getConnection();
             statement = connection.createStatement();
 
-            sql = "select employee_id,username,password,department from admin where username='" + username.getText() + "';";
+            sql = "select employee_id,username,password,department from employee where username='" + username.getText() + "';";
 
             resultSet = statement.executeQuery(sql);
             //Ensure we start with first row
