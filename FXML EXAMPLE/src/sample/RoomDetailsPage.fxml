@@ -56,10 +56,10 @@
                 <Font size="15.0" />
             </font>
         </Button>
-        <AnchorPane layoutX="106.0" layoutY="311.0" prefHeight="26.0" prefWidth="376.0" style="-fx-background-color: #fff;">
+        <AnchorPane layoutX="112.0" layoutY="248.0" prefHeight="26.0" prefWidth="376.0" style="-fx-background-color: #fff;">
             <children>
-                <DatePicker layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-in" />
-                <DatePicker layoutX="239.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-out" />
+                <DatePicker fx:id="checkIn" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-in" />
+                <DatePicker fx:id="checkOut" layoutX="239.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-out" />
                 <Label alignment="CENTER" graphicTextGap="0.0" layoutX="181.0" layoutY="-19.0" prefHeight="5.0" prefWidth="15.0" text="_" textAlignment="CENTER" textFill="#111111">
                     <font>
                         <Font size="36.0" />
@@ -75,5 +75,10 @@
                 <Font size="18.0" />
             </font>
         </CheckBox>
+      <Label fx:id="promptLabel" alignment="CENTER" layoutX="208.0" layoutY="332.0" prefHeight="31.0" prefWidth="172.0" textFill="#eb0505">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

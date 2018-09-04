@@ -10,6 +10,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 
@@ -33,6 +35,12 @@ public class RoomDetailsPageController {
     public ToggleButton bhk2;
     @FXML
     public ToggleButton bhk3;
+    @FXML
+    public DatePicker checkIn;
+    @FXML
+    public DatePicker checkOut;
+    @FXML
+    public Label promptLabel;
     //id's of all the buttons,labels seen in UI
 
 
@@ -172,6 +180,17 @@ public class RoomDetailsPageController {
     public void searchResult(ActionEvent event) throws IOException, SQLException {
 
 
+        if(checkOut.getValue()==null)
+        {
+            promptLabel.setText("Please enter the checkout date");
+            return;
+        }
+        String checkOutDate=checkOut.getValue().toString();
+        String checkInDate=null;
+        if(!(checkIn.getValue()==null))
+            checkInDate=checkIn.getValue().toString();
+
+
         int deluxeCount,superiorCount,standardCount;
         float deluxePrice,superiorPrice,standardPrice;
 
@@ -216,7 +235,9 @@ public class RoomDetailsPageController {
         RoomAvailabilityPageController controller = fxmlLoader.<RoomAvailabilityPageController>getController();
        // System.out.println(controller);
 
-        controller.set(employeeId,deluxeCount,superiorCount,standardCount,deluxePrice,superiorPrice,standardPrice,roomSize);
+
+
+        controller.set(employeeId,deluxeCount,superiorCount,standardCount,deluxePrice,superiorPrice,standardPrice,roomSize,checkInDate,checkOutDate);
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
         rootStage.setScene(new Scene(roomResultPage, 600, 495));
         rootStage.show();

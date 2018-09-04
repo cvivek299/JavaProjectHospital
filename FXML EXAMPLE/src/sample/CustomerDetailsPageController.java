@@ -31,19 +31,36 @@ public class CustomerDetailsPageController {
     //room which this customer will take,and employeeId of receptionist
     public int roomNo,employeeId;
     //room which this customer will take,and employeeId of receptionist
-
+    public String checkInDate,checkOutDate;
 
     //this function used by roomAvailabilityPageController,it passes the room_no to this
-    public void set(int employeeId,int roomNo)
+    public void set(int employeeId,int roomNo,String checkInDate,String checkOutDate)
     {
         this.employeeId=employeeId;
         this.roomNo=roomNo;
+        this.checkInDate=checkInDate;
+        this.checkOutDate=checkOutDate;
     }
     //this function used by roomAvailabilityPageController,it passes the room_no to this
 
-    public void insertIntoBooking(int employeeId,int customerId,int roomNo) throws SQLException {
-        String sql="insert into booking(employee_id,customer_id,room_No) values ("+employeeId+","+customerId+"" +
-                ","+roomNo+");";
+    public void insertIntoBooking(int employeeId,int customerId,int roomNo,String checkInDate,String checkOutDate) throws SQLException {
+
+        String sql=null;
+        if(checkInDate==null)
+        {
+            sql="insert into booking(employee_id,customer_id,room_No,check_out) " +
+                    "values ("+employeeId+","+customerId+"" +
+                    ","+roomNo+",'"+checkOutDate+"');";
+
+        }
+        else
+        {
+            sql="insert into booking(employee_id,customer_id,room_No,check_in,check_out) " +
+                    "values ("+employeeId+","+customerId+"" +
+                    ","+roomNo+",'"+checkInDate+"','"+checkOutDate+"');";
+
+        }
+
         Connection connection=null;
         Statement statement=null;
         try {
@@ -64,6 +81,33 @@ public class CustomerDetailsPageController {
             if(connection!=null)
                 connection.close();
         }
+
+    }
+
+    void updateRoomTable(int roomNo) throws SQLException {
+
+        String sql="update room set is_reserved=1 where room_no="+roomNo+";";
+        Connection connection=null;
+        Statement statement=null;
+        try {
+            ConnectionClass connectionClass = new ConnectionClass();
+            connection = connectionClass.getConnection();
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            if(statement!=null)
+                statement.close();
+
+            if(connection!=null)
+                connection.close();
+        }
+
 
     }
 
@@ -136,8 +180,8 @@ public class CustomerDetailsPageController {
                 if (connection != null)
                     connection.close();
 
-                insertIntoBooking(employeeId,customerId,roomNo);
-
+                insertIntoBooking(employeeId,customerId,roomNo,checkInDate,checkOutDate);
+                updateRoomTable(roomNo);
                 System.out.println("BOOOKED");
 
             }

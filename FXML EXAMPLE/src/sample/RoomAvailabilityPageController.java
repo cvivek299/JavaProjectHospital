@@ -66,9 +66,11 @@ public class RoomAvailabilityPageController {
     private float deluxePrice,superiorPrice,standardPrice;
     private int employeeId;
     private String roomSize;
+    private String checkInDate,checkOutDate;
 
     //this function used by RoomDetailsPageController,it passes the count of rooms,and their price,and employeeId
-    public void set(int employeeId,int deluxeCount,int superiorCount,int standardCount,float deluxePrice,float superiorPrice,float standardPrice,String roomSize)
+    public void set(int employeeId,int deluxeCount,int superiorCount,int standardCount,float deluxePrice,float superiorPrice,float standardPrice,String roomSize,
+                    String checkInDate,String checkOutDate)
     {
         System.out.println(standardCount);
         this.employeeId=employeeId;
@@ -79,6 +81,8 @@ public class RoomAvailabilityPageController {
         this.superiorPrice=superiorPrice;
         this.standardPrice=standardPrice;
         this.roomSize=roomSize;
+        this.checkInDate=checkInDate;
+        this.checkOutDate=checkOutDate;
 
         //setting values on the labels on ui
         deluxeRoomsCount.setText(deluxeCount+" rooms left.");
@@ -182,7 +186,7 @@ public class RoomAvailabilityPageController {
         CustomerDetailsPageController controller = fxmlLoader.<CustomerDetailsPageController>getController();
         // System.out.println(controller);
 
-        controller.set(employeeId,roomNo);
+        controller.set(employeeId,roomNo,checkInDate,checkOutDate);
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
         rootStage.setScene(new Scene(roomResultPage, 600, 495));
         rootStage.show();
