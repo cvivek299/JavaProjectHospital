@@ -53,6 +53,26 @@ public class HomePageForReceptionController {
 
     }
 
+    @FXML
+    public void printBillClicked(ActionEvent event) throws IOException{
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BillDetailsPage.fxml"));
+        Parent billDetailsPage = fxmlLoader.load();
+        BillDetailsPageController controller = fxmlLoader.<BillDetailsPageController>getController();
+
+        controller.set(employeeId);
+        Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
+        rootStage.setScene(new Scene(billDetailsPage, 600, 495));
+        rootStage.show();
+        //when clicked go to RoomDetailsPage,also pass it employeeId
+
+
+    }
+
+
+
+
+
 
 
 

@@ -9,6 +9,6 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomePageForReceptionController">
    <children>
       <Button fx:id="roomBookButton" layoutX="274.0" layoutY="62.0" mnemonicParsing="false" onAction="#roomBookClicked" text="Book a room" />
-      <Button fx:id="printBillButton" layoutX="291.0" layoutY="137.0" mnemonicParsing="false" text="Print Bill" />
+      <Button fx:id="printBillButton" layoutX="291.0" layoutY="137.0" mnemonicParsing="false" onAction="#printBillClicked" text="Print Bill" />
    </children>
 </AnchorPane>

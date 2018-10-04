@@ -126,10 +126,6 @@ public class CustomerDetailsPageController {
             ConnectionClass connectionClass = new ConnectionClass();
             connection = connectionClass.getConnection();
 
-
-
-
-
             sqlWithLastName = "insert into customer(first_name,last_name,email_address,phone_number) values(?,?,?,?);";
             sqlWithoutLastName = "insert into customer(first_name,email_address,phone_number) values(?,?,?);";
 
