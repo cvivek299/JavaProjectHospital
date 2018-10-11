@@ -1,6 +1,5 @@
 package sample;
 
-import connectivity.ConnectionClass;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,30 +21,30 @@ import java.util.HashMap;
 public class RoomDetailsPageController {
 
     //simply a map which maps "5000"->5000,...
-    public HashMap<String,Integer> budget;
+    private HashMap<String,Integer> budget;
 
     //id's of all the buttons,labels seen in UI
     @FXML
-    public ComboBox minBudget;
+    private ComboBox minBudget;
     @FXML
-    public ComboBox maxBudget;
+    private ComboBox maxBudget;
     @FXML
-    public ToggleButton bhk1;
+    private ToggleButton bhk1;
     @FXML
-    public ToggleButton bhk2;
+    private ToggleButton bhk2;
     @FXML
-    public ToggleButton bhk3;
+    private ToggleButton bhk3;
     @FXML
-    public DatePicker checkIn;
+    private DatePicker checkIn;
     @FXML
-    public DatePicker checkOut;
+    private DatePicker checkOut;
     @FXML
-    public Label promptLabel;
+    private Label promptLabel;
     //id's of all the buttons,labels seen in UI
 
 
     //employeeId of the person logged in,and who is booking
-    public int employeeId;
+    private int employeeId;
     //employeeId of the person logged in,and who is booking
 
     //in ui,these pop down,when we click min Budget,max Budget
@@ -72,19 +71,12 @@ public class RoomDetailsPageController {
         budget.put("10000",10000);
         budget.put("15000",15000);
         budget.put("20000",20000);
-
-
     }
     //first method to be called
 
 
-    @FXML
-    public void bedroom()
-    {
-    }
-
     //returns the selected roomSize
-    public String getRoomSize()
+    private String getRoomSize()
     {
         String roomSize=null;
 
@@ -94,82 +86,19 @@ public class RoomDetailsPageController {
             roomSize="2BHK";
         if(bhk3.isSelected())
             roomSize="3BHK";
-
         return roomSize;
 
     }
 
     //returns the number of room of type specified by sql query,like 1BHK deluxe,which are not reserved
-    public int countRooms(String sql) throws SQLException {
-        Connection connection=null;
-        Statement statement=null;
-        ResultSet resultSet=null;
-        int roomCount=0;
-        try {
-            ConnectionClass connectionClass = new ConnectionClass();
-            connection = connectionClass.getConnection();
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql);
-            //Ensure we start with first row
-            resultSet.beforeFirst();
-            resultSet.next();
-            roomCount = resultSet.getInt(1);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        finally
-        {
-            if(resultSet!=null)
-                resultSet.close();
-
-            if(statement!=null)
-                statement.close();
-
-            if(connection!=null)
-                connection.close();
-        }
-
-        return roomCount;
-
+    private int countRooms(String sql) throws SQLException {
+        return SqlOperations.countInTable(sql);
     }
     //returns the number of room of type specified by sql query,like 1BHK deluxe,which are not reserved
 
     //returns the price of a given type of room
-    public float roomPrice(String sql) throws SQLException {
-        Connection connection=null;
-        Statement statement=null;
-        ResultSet resultSet=null;
-        float price=0;
-        try {
-            ConnectionClass connectionClass = new ConnectionClass();
-            connection = connectionClass.getConnection();
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql);
-            //Ensure we start with first row
-            resultSet.beforeFirst();
-            resultSet.next();
-            price = resultSet.getFloat(1);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        finally
-        {
-            if(resultSet!=null)
-                resultSet.close();
-
-            if(statement!=null)
-                statement.close();
-
-            if(connection!=null)
-                connection.close();
-        }
-
-        return price;
-
+    private float roomPrice(String sql) throws SQLException {
+        return SqlOperations.floatSelect(sql);
     }
     //returns the price of a given type of room
 
@@ -228,22 +157,15 @@ public class RoomDetailsPageController {
         superiorPrice=roomPrice(sqlSuperiorPrice);
         standardPrice=roomPrice(sqlStandardPrice);
 
-
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("roomAvailabilityPage.fxml"));
         Parent roomResultPage = fxmlLoader.load();
         RoomAvailabilityPageController controller = fxmlLoader.<RoomAvailabilityPageController>getController();
        // System.out.println(controller);
 
-
-
         controller.set(employeeId,deluxeCount,superiorCount,standardCount,deluxePrice,superiorPrice,standardPrice,roomSize,checkInDate,checkOutDate);
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
         rootStage.setScene(new Scene(roomResultPage, 600, 495));
         rootStage.show();
-
-
-
 
     }
 

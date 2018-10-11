@@ -1,6 +1,5 @@
 package sample;
 
-import connectivity.ConnectionClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,55 +10,36 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
-
-import javax.swing.*;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
+
 
 public class RoomAvailabilityPageController {
 
     //id's of all the buttons,labels seen in UI
     @FXML
-    public Label deluxeRoomsCount;
-
+    private Label deluxeRoomsCount;
     @FXML
-    public Label superiorRoomsCount;
-
+    private Label superiorRoomsCount;
     @FXML
-    public Label standardRoomsCount;
-
+    private Label standardRoomsCount;
     @FXML
-    public Label deluxePriceLabel;
-
+    private Label deluxePriceLabel;
     @FXML
-    public Label superiorPriceLabel;
-
+    private Label superiorPriceLabel;
     @FXML
-    public Label standardPriceLabel;
-
+    private Label standardPriceLabel;
     @FXML
-    public Label errorLabel;
-
+    private Label errorLabel;
     @FXML
-    public Button bookButton;
-
+    private Button bookButton;
     @FXML
-    public ToggleButton deluxeButton;
-
+    private ToggleButton deluxeButton;
     @FXML
-    public ToggleButton superiorButton;
-
+    private ToggleButton superiorButton;
     @FXML
-    public ToggleButton standardButton;
+    private ToggleButton standardButton;
     //id's of all the buttons,labels seen in UI
-
-
-
 
 
     private int deluxeCount,superiorCount,standardCount;
@@ -97,69 +77,29 @@ public class RoomAvailabilityPageController {
 
 
     //returns the selected roomType
-    public String getRoomType()
+    private String getRoomType()
     {
-
         String roomType=null;
-
         if(standardButton.isSelected())
             roomType="standard";
         if(superiorButton.isSelected())
             roomType="superior";
         if(deluxeButton.isSelected())
             roomType="deluxe";
-
         return roomType;
-
     }
     //returns the selected roomType
 
-
     //lets say he chooses deluxe,and rooms are available,then get the roomNo of one such deluxe room
-    public int getFirstRoom(String roomType) throws SQLException {
+    private int getFirstRoom(String roomType) throws SQLException {
         String sql="select room_no from room where "+
                 "room_size='"+roomSize+"' and " +
                 "room_type='"+roomType+"' and is_reserved = 0;";
-        int roomNo=0;
-        Connection connection=null;
-        Statement statement=null;
-        ResultSet resultSet=null;
-        try {
-            ConnectionClass connectionClass = new ConnectionClass();
-            connection = connectionClass.getConnection();
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql);
-            //Ensure we start with first row
-            resultSet.beforeFirst();
-            resultSet.next();
-            roomNo = resultSet.getInt(1);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        finally
-        {
-            if(resultSet!=null)
-                resultSet.close();
-
-            if(statement!=null)
-                statement.close();
-
-            if(connection!=null)
-                connection.close();
-        }
-
-        return roomNo;
-
+        return SqlOperations.intSelect(sql);
     }
-
-
 
     @FXML
     public void bookButtonClicked(ActionEvent event) throws IOException, SQLException {
-
-
         String roomType=getRoomType();
         //if he doesnt selects any of the three
         if(roomType==null)
@@ -180,7 +120,6 @@ public class RoomAvailabilityPageController {
 
         int roomNo=getFirstRoom(roomType);
 
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CustomerDetailsPage.fxml"));
         Parent roomResultPage = fxmlLoader.load();
         CustomerDetailsPageController controller = fxmlLoader.<CustomerDetailsPageController>getController();
@@ -190,7 +129,6 @@ public class RoomAvailabilityPageController {
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
         rootStage.setScene(new Scene(roomResultPage, 600, 495));
         rootStage.show();
-
     }
 
 

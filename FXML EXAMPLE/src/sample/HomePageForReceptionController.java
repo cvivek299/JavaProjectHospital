@@ -8,22 +8,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class HomePageForReceptionController {
 
     //id's of all the buttons,labels seen in UI
     @FXML
-    public Button roomBookButton;
-
+    private Button roomBookButton;
     @FXML
-    public Button printBillButton;
+    private Button printBillButton;
     //id's of all the buttons,labels seen in UI
 
-
     //employeeId who has logged on(whose department is reception)
-    int employeeId;
+    private int employeeId;
     //employeeId who has logged on(whose department is reception)
 
     //this function used by LoginPageController,it passes the employee_id of the person who logs in to this
@@ -32,7 +29,6 @@ public class HomePageForReceptionController {
         this.employeeId=employeeId;
     }
     //this function used by LoginPageController,it passes the employee_id of the person who logs in to this
-
 
 
     @FXML
@@ -49,8 +45,6 @@ public class HomePageForReceptionController {
         rootStage.setScene(new Scene(roomDetailsPage, 600, 495));
         rootStage.show();
         //when clicked go to RoomDetailsPage,also pass it employeeId
-
-
     }
 
     @FXML
@@ -65,15 +59,7 @@ public class HomePageForReceptionController {
         rootStage.setScene(new Scene(billDetailsPage, 600, 495));
         rootStage.show();
         //when clicked go to RoomDetailsPage,also pass it employeeId
-
-
     }
-
-
-
-
-
-
 
 
 

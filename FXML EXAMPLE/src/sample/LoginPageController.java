@@ -2,6 +2,7 @@ package sample;
 
 import connectivity.ConnectionClass;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -12,6 +13,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,18 +22,27 @@ import java.sql.Statement;
 public class LoginPageController {
 
     //id's of all the buttons,labels seen in UI
-    public Button signUp;
-    public Label success;
-    public TextField username;
-    public PasswordField password;
+    @FXML
+    private Button signUp;
+    @FXML
+    private Label success;
+    @FXML
+    private TextField username;
+    @FXML
+    private PasswordField password;
     //id's of all the buttons,labels seen in UI
 
+    @FXML
+    public void signUpClicked(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SignUpPage.fxml"));
+        Parent roomResultPage = fxmlLoader.load();
+        Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
+        rootStage.setScene(new Scene(roomResultPage, 600, 495));
+        rootStage.show();
 
-    public void signUpClicked()
-    {
-        signUp.setText("Yes");
     }
 
+    @FXML
     //when login clicked,simply sql,to check if valid username,password,and if receptionist,go to HomePageForReception passing employeeId
     public void loginClicked(ActionEvent event) throws SQLException
     {

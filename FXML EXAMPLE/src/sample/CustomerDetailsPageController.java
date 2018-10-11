@@ -4,7 +4,6 @@ import connectivity.ConnectionClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
 import java.sql.*;
 
 public class CustomerDetailsPageController {
@@ -12,26 +11,22 @@ public class CustomerDetailsPageController {
 
     //id's of all the buttons,labels seen in UI
     @FXML
-    public TextField firstName;
-
+    private TextField firstName;
     @FXML
-    public TextField lastName;
-
+    private TextField lastName;
     @FXML
-    public TextField emailAddress;
-
+    private TextField emailAddress;
     @FXML
-    public TextField phoneNumber;
-
+    private TextField phoneNumber;
     @FXML
-    public Label alertMessage;
+    private Label alertMessage;
     //id's of all the buttons,labels seen in UI
 
 
     //room which this customer will take,and employeeId of receptionist
-    public int roomNo,employeeId;
+    private int roomNo,employeeId;
     //room which this customer will take,and employeeId of receptionist
-    public String checkInDate,checkOutDate;
+    private String checkInDate,checkOutDate;
 
     //this function used by roomAvailabilityPageController,it passes the room_no to this
     public void set(int employeeId,int roomNo,String checkInDate,String checkOutDate)
@@ -43,7 +38,7 @@ public class CustomerDetailsPageController {
     }
     //this function used by roomAvailabilityPageController,it passes the room_no to this
 
-    public void insertIntoBooking(int employeeId,int customerId,int roomNo,String checkInDate,String checkOutDate) throws SQLException {
+    private void insertIntoBooking(int employeeId,int customerId,int roomNo,String checkInDate,String checkOutDate) throws SQLException {
 
         String sql=null;
         if(checkInDate==null)
@@ -51,69 +46,25 @@ public class CustomerDetailsPageController {
             sql="insert into booking(employee_id,customer_id,room_No,check_out) " +
                     "values ("+employeeId+","+customerId+"" +
                     ","+roomNo+",'"+checkOutDate+"');";
-
         }
         else
         {
             sql="insert into booking(employee_id,customer_id,room_No,check_in,check_out) " +
                     "values ("+employeeId+","+customerId+"" +
                     ","+roomNo+",'"+checkInDate+"','"+checkOutDate+"');";
-
         }
-
-        Connection connection=null;
-        Statement statement=null;
-        try {
-            ConnectionClass connectionClass = new ConnectionClass();
-            connection = connectionClass.getConnection();
-            statement = connection.createStatement();
-            statement.executeUpdate(sql);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        finally
-        {
-            if(statement!=null)
-                statement.close();
-
-            if(connection!=null)
-                connection.close();
-        }
-
+        SqlOperations.insert(sql);
     }
 
-    void updateRoomTable(int roomNo) throws SQLException {
+    private void updateRoomTable(int roomNo) throws SQLException {
 
         String sql="update room set is_reserved=1 where room_no="+roomNo+";";
-        Connection connection=null;
-        Statement statement=null;
-        try {
-            ConnectionClass connectionClass = new ConnectionClass();
-            connection = connectionClass.getConnection();
-            statement = connection.createStatement();
-            statement.executeUpdate(sql);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        finally
-        {
-            if(statement!=null)
-                statement.close();
-
-            if(connection!=null)
-                connection.close();
-        }
-
-
+        SqlOperations.update(sql);
     }
 
     //when submit/book button clicked
     @FXML
-    void addCustomer() throws SQLException {
+    public void addCustomer() throws SQLException {
         //sql part->adding into database
         Connection connection = null;
         Statement statement=null;
