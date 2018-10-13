@@ -99,7 +99,7 @@ public class SignUpPageController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
         Parent roomResultPage = fxmlLoader.load();
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
-        rootStage.setScene(new Scene(roomResultPage, 600, 495));
+        rootStage.setScene(new Scene(roomResultPage, 1200, 650));
         rootStage.show();
     }
 

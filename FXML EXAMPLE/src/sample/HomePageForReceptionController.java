@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class HomePageForReceptionController {
+public class HomePageForReceptionController extends CommonActions {
 
     //id's of all the buttons,labels seen in UI
     @FXML
@@ -42,7 +42,7 @@ public class HomePageForReceptionController {
 
         controller.set(employeeId);
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
-        rootStage.setScene(new Scene(roomDetailsPage, 600, 495));
+        rootStage.setScene(new Scene(roomDetailsPage, 1200, 650));
         rootStage.show();
         //when clicked go to RoomDetailsPage,also pass it employeeId
     }
@@ -56,7 +56,7 @@ public class HomePageForReceptionController {
 
         controller.set(employeeId);
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
-        rootStage.setScene(new Scene(billDetailsPage, 600, 495));
+        rootStage.setScene(new Scene(billDetailsPage, 1200, 650));
         rootStage.show();
         //when clicked go to RoomDetailsPage,also pass it employeeId
     }

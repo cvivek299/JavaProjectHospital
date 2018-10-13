@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomePageForReceptionController">
+<AnchorPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomePageForReceptionController">
    <children>
-      <Button fx:id="roomBookButton" layoutX="274.0" layoutY="62.0" mnemonicParsing="false" onAction="#roomBookClicked" text="Book a room" />
-      <Button fx:id="printBillButton" layoutX="291.0" layoutY="137.0" mnemonicParsing="false" onAction="#printBillClicked" text="Print Bill" />
+      <StackPane prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Group>
+               <children>
+                  <AnchorPane prefHeight="414.0" prefWidth="419.0">
+                     <children>
+                        <Button fx:id="roomBookButton" layoutX="145.0" layoutY="67.0" mnemonicParsing="false" onAction="#roomBookClicked" prefHeight="53.0" prefWidth="142.0" text="Book a room">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="printBillButton" layoutX="151.0" layoutY="221.0" mnemonicParsing="false" onAction="#printBillClicked" prefHeight="53.0" prefWidth="130.0" text="Print Bill">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Group>
+         </children>
+      </StackPane>
+      <Button fx:id="logout" layoutX="55.0" layoutY="24.0" mnemonicParsing="false" onAction="#onLogoutClicked" prefHeight="47.0" prefWidth="135.0" style="-fx-background-color: ORANGE;" text="LOGOUT" textFill="#f2f0f0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

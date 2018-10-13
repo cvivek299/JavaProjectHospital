@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class RoomAvailabilityPageController {
+public class RoomAvailabilityPageController extends CommonActions {
 
     //id's of all the buttons,labels seen in UI
     @FXML
@@ -39,6 +39,9 @@ public class RoomAvailabilityPageController {
     private ToggleButton superiorButton;
     @FXML
     private ToggleButton standardButton;
+    @FXML
+    private Button back;
+
     //id's of all the buttons,labels seen in UI
 
 
@@ -127,8 +130,23 @@ public class RoomAvailabilityPageController {
 
         controller.set(employeeId,roomNo,checkInDate,checkOutDate);
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
-        rootStage.setScene(new Scene(roomResultPage, 600, 495));
+        rootStage.setScene(new Scene(roomResultPage, 1200, 650));
         rootStage.show();
+    }
+
+    @FXML
+    public void onBackClicked(ActionEvent event) throws IOException {
+        //when clicked go to RoomDetailsPage,also pass it employeeId
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoomDetailsPage.fxml"));
+        Parent roomDetailsPage = fxmlLoader.load();
+        RoomDetailsPageController controller = fxmlLoader.<RoomDetailsPageController>getController();
+        controller.set(employeeId);
+
+        Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
+        rootStage.setScene(new Scene(roomDetailsPage, 1200, 650));
+        rootStage.show();
+        //when clicked go to RoomDetailsPage,also pass it employeeId
+
     }
 
 

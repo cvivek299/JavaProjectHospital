@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class SqlOperations {
-    
+
     public static float floatSelect(String sql) throws SQLException {
         Connection connection=null;
         Statement statement=null;

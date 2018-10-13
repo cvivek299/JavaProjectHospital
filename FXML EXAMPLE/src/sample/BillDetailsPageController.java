@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 //get ur bill ,and update bill table using your booking id
 //no checks for two bills with same booking id,program will go down,databse will be consistent
-public class BillDetailsPageController {
+public class BillDetailsPageController extends CommonActions {
 
     @FXML
     private TextField bookingId;
@@ -20,6 +20,7 @@ public class BillDetailsPageController {
     //passing employee id from prev page
     public void set(int employeeId)
     {
+        super.employeeId=employeeId;
         this.employeeId=employeeId;
     }
 

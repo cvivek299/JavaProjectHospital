@@ -1,84 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="495.0" prefWidth="600.0" style="-fx-background-color: #337;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RoomDetailsPageController">
-    <children>
-        <Label alignment="CENTER" layoutX="88.0" layoutY="131.0" text="Budget" textAlignment="CENTER" textFill="#f9fcfa">
-            <font>
-                <Font size="21.0" />
-            </font>
-        </Label>
-        <ComboBox fx:id="minBudget" layoutX="175.0" layoutY="134.0" prefWidth="90.0" promptText="Min" />
-        <Label layoutX="286.0" layoutY="108.0" text="_" textFill="#f2f0f0">
-            <font>
-                <Font size="36.0" />
-            </font>
-        </Label>
-        <ComboBox fx:id="maxBudget" layoutX="324.0" layoutY="134.0" prefWidth="90.0" promptText="Max" />
-        <ImageView fitHeight="39.0" fitWidth="150.0" layoutX="274.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@logo.png" />
-            </image>
-        </ImageView>
-        <Label layoutX="229.0" layoutY="72.0" text="Hotel" textFill="#0fda2a">
-            <font>
-                <Font name="Aharoni Bold" size="20.0" />
-            </font>
-        </Label>
-        <Label layoutX="293.0" layoutY="72.0" text="Sublime" textFill="#9e9696">
-            <font>
-                <Font name="Aharoni Bold" size="20.0" />
-            </font>
-        </Label>
-        <Label layoutX="88.0" layoutY="193.0" text="Number of bedrooms" textFill="#fcf8f8">
-            <font>
-                <Font size="21.0" />
-            </font>
-        </Label>
-        <ToggleButton fx:id="bhk1" layoutX="300.0" layoutY="196.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="1 BHK">
-            <toggleGroup>
-                <ToggleGroup fx:id="toggleGroup1" />
-            </toggleGroup>
-        </ToggleButton>
-        <ToggleButton fx:id="bhk2" layoutX="365.0" layoutY="196.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="2 BHK" toggleGroup="$toggleGroup1" />
-        <ToggleButton fx:id="bhk3" layoutX="431.0" layoutY="196.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="3 BHK" toggleGroup="$toggleGroup1" />
-        <ToggleButton fx:id="bhkAny" layoutX="496.0" layoutY="196.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="ALL BHK" toggleGroup="$toggleGroup1" />
-        <Button layoutX="261.0" layoutY="440.0" mnemonicParsing="false" onAction="#searchResult" style="-fx-background-color: #f00;" text="Search" textFill="#321283">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Button>
-        <AnchorPane layoutX="112.0" layoutY="248.0" prefHeight="26.0" prefWidth="376.0" style="-fx-background-color: #fff;">
-            <children>
-                <DatePicker fx:id="checkIn" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-in" />
-                <DatePicker fx:id="checkOut" layoutX="239.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-out" />
-                <Label alignment="CENTER" graphicTextGap="0.0" layoutX="181.0" layoutY="-19.0" prefHeight="5.0" prefWidth="15.0" text="_" textAlignment="CENTER" textFill="#111111">
-                    <font>
-                        <Font size="36.0" />
-                    </font>
-                </Label>
-            </children>
-            <padding>
-                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-            </padding>
-        </AnchorPane>
-        <CheckBox layoutX="239.0" layoutY="386.0" mnemonicParsing="false" text="Breakfast" textFill="#fffbfb">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </CheckBox>
-      <Label fx:id="promptLabel" alignment="CENTER" layoutX="208.0" layoutY="332.0" prefHeight="31.0" prefWidth="172.0" textFill="#eb0505">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RoomDetailsPageController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1200.0" pickOnBounds="true">
+         <image>
+            <Image url="@backgroundCustomer.jpg" />
+         </image>
+      </ImageView>
+      <StackPane prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Group>
+               <children>
+                  <AnchorPane prefHeight="495.0" prefWidth="662.0" style="-fx-background-color: #337;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="88.0" layoutY="131.0" text="Budget" textAlignment="CENTER" textFill="#f9fcfa">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="minBudget" layoutX="175.0" layoutY="134.0" prefWidth="90.0" promptText="Min" />
+                        <Label layoutX="286.0" layoutY="108.0" text="_" textFill="#f2f0f0">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="maxBudget" layoutX="324.0" layoutY="134.0" prefWidth="90.0" promptText="Max" />
+                        <ImageView fitHeight="39.0" fitWidth="150.0" layoutX="274.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="229.0" layoutY="72.0" text="Hotel" textFill="#0fda2a">
+                           <font>
+                              <Font name="Aharoni Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="293.0" layoutY="72.0" text="Sublime" textFill="#9e9696">
+                           <font>
+                              <Font name="Aharoni Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="88.0" layoutY="193.0" text="Number of bedrooms" textFill="#fcf8f8">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <ToggleButton fx:id="bhk1" layoutX="300.0" layoutY="196.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="1 BHK">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleGroup1" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton fx:id="bhk2" layoutX="365.0" layoutY="196.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="2 BHK" toggleGroup="$toggleGroup1" />
+                        <ToggleButton fx:id="bhk3" layoutX="431.0" layoutY="196.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="3 BHK" toggleGroup="$toggleGroup1" />
+                        <ToggleButton fx:id="bhkAny" layoutX="496.0" layoutY="196.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="ALL BHK" toggleGroup="$toggleGroup1" />
+                        <Button layoutX="261.0" layoutY="440.0" mnemonicParsing="false" onAction="#searchResult" style="-fx-background-color: #f00;" text="Search" textFill="#321283">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutX="112.0" layoutY="248.0" prefHeight="26.0" prefWidth="376.0" style="-fx-background-color: #fff;">
+                           <children>
+                              <DatePicker fx:id="checkIn" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-in" />
+                              <DatePicker fx:id="checkOut" layoutX="239.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" promptText="Check-out" />
+                              <Label alignment="CENTER" graphicTextGap="0.0" layoutX="181.0" layoutY="-19.0" prefHeight="5.0" prefWidth="15.0" text="_" textAlignment="CENTER" textFill="#111111">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </AnchorPane>
+                        <CheckBox layoutX="239.0" layoutY="386.0" mnemonicParsing="false" text="Breakfast" textFill="#fffbfb">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <Label fx:id="promptLabel" alignment="CENTER" layoutX="208.0" layoutY="332.0" prefHeight="31.0" prefWidth="172.0" textFill="#eb0505">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Group>
+         </children>
+      </StackPane>
+      <Button fx:id="back" alignment="CENTER" layoutX="54.0" layoutY="24.0" mnemonicParsing="false" onAction="#onBackClicked" prefHeight="45.0" prefWidth="69.0" style="-fx-background-color: white;" text="&lt;">
          <font>
-            <Font size="19.0" />
+            <Font size="28.0" />
          </font>
-      </Label>
-    </children>
+      </Button>
+      <Button fx:id="logout" layoutX="1032.0" layoutY="24.0" mnemonicParsing="false" onAction="#onLogoutClicked" prefHeight="47.0" prefWidth="135.0" style="-fx-background-color: ORANGE;" text="LOGOUT" textFill="#f2f0f0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

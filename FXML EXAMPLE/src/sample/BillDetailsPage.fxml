@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BillDetailsPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BillDetailsPageController">
    <children>
-      <Label layoutX="74.0" layoutY="77.0" prefHeight="25.0" prefWidth="98.0" text="Employee Id" />
-      <TextField fx:id="bookingId" layoutX="241.0" layoutY="65.0" prefHeight="25.0" prefWidth="149.0" />
-      <Button layoutX="264.0" layoutY="244.0" mnemonicParsing="false" onAction="#createBill" text="CreateBill" />
-      <Label fx:id="alertMessage" layoutX="264.0" layoutY="200.0" />
+      <StackPane layoutX="130.0" layoutY="103.0" prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Group>
+               <children>
+                  <AnchorPane prefHeight="448.0" prefWidth="545.0">
+                     <children>
+                        <Label layoutX="43.0" layoutY="35.0" prefHeight="37.0" prefWidth="129.0" text="Booking Id">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="bookingId" layoutX="199.0" layoutY="41.0" />
+                        <Button layoutX="123.0" layoutY="163.0" mnemonicParsing="false" onAction="#createBill" prefHeight="54.0" prefWidth="224.0" text="Create Bill" />
+                        <Label fx:id="alertMessage" layoutX="233.0" layoutY="277.0">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Group>
+         </children>
+      </StackPane>
+      <Button fx:id="home" layoutX="1020.0" layoutY="26.0" mnemonicParsing="false" onAction="#onHomePageClicked" prefHeight="47.0" prefWidth="135.0" style="-fx-background-color: ORANGE;" text="Home " textFill="#f2f0f0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

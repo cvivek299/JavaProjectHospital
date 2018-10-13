@@ -37,7 +37,7 @@ public class LoginPageController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SignUpPage.fxml"));
         Parent roomResultPage = fxmlLoader.load();
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
-        rootStage.setScene(new Scene(roomResultPage, 600, 495));
+        rootStage.setScene(new Scene(roomResultPage, 1200, 650));
         rootStage.show();
 
     }
@@ -80,7 +80,7 @@ public class LoginPageController {
 
                         controller.set(employeeId);
                         Stage rootStage = (Stage) (((Node) event.getSource()).getScene().getWindow());
-                        rootStage.setScene(new Scene(HomePageForReception, 600, 495));
+                        rootStage.setScene(new Scene(HomePageForReception, 1200, 650));
                         rootStage.show();
                     }
                 }

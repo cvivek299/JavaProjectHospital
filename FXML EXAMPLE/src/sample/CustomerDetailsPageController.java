@@ -1,12 +1,21 @@
 package sample;
-
+//1200*650
 import connectivity.ConnectionClass;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.sql.*;
 
-public class CustomerDetailsPageController {
+public class CustomerDetailsPageController extends CommonActions {
 
 
     //id's of all the buttons,labels seen in UI
@@ -20,6 +29,10 @@ public class CustomerDetailsPageController {
     private TextField phoneNumber;
     @FXML
     private Label alertMessage;
+    @FXML
+    private Button logout;
+    @FXML
+    private Button home;
     //id's of all the buttons,labels seen in UI
 
 
@@ -31,10 +44,12 @@ public class CustomerDetailsPageController {
     //this function used by roomAvailabilityPageController,it passes the room_no to this
     public void set(int employeeId,int roomNo,String checkInDate,String checkOutDate)
     {
+        super.employeeId=employeeId;
         this.employeeId=employeeId;
         this.roomNo=roomNo;
         this.checkInDate=checkInDate;
         this.checkOutDate=checkOutDate;
+
     }
     //this function used by roomAvailabilityPageController,it passes the room_no to this
 
@@ -141,4 +156,6 @@ public class CustomerDetailsPageController {
         //sql part->adding into database
     }
     //when submit/book button clicked
+
+
 }

@@ -8,17 +8,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.HashMap;
 
-public class RoomDetailsPageController {
+public class RoomDetailsPageController extends CommonActions {
 
     //simply a map which maps "5000"->5000,...
     private HashMap<String,Integer> budget;
@@ -40,6 +37,8 @@ public class RoomDetailsPageController {
     private DatePicker checkOut;
     @FXML
     private Label promptLabel;
+    @FXML
+    private Button back;
     //id's of all the buttons,labels seen in UI
 
 
@@ -164,8 +163,24 @@ public class RoomDetailsPageController {
 
         controller.set(employeeId,deluxeCount,superiorCount,standardCount,deluxePrice,superiorPrice,standardPrice,roomSize,checkInDate,checkOutDate);
         Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
-        rootStage.setScene(new Scene(roomResultPage, 600, 495));
+        rootStage.setScene(new Scene(roomResultPage, 1200, 650));
         rootStage.show();
+
+    }
+
+
+    @FXML
+    public void onBackClicked(ActionEvent event) throws IOException {
+        //when clicked go to RoomDetailsPage,also pass it employeeId
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HomePageForReception.fxml"));
+        Parent homePageForReception = fxmlLoader.load();
+        HomePageForReceptionController controller = fxmlLoader.<HomePageForReceptionController>getController();
+
+        controller.set(employeeId);
+        Stage rootStage=(Stage)(((Node)event.getSource()).getScene().getWindow());
+        rootStage.setScene(new Scene(homePageForReception, 1200, 650));
+        rootStage.show();
+        //when clicked go to RoomDetailsPage,also pass it employeeId
 
     }
 
